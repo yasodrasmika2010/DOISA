@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOISA - Private Chat</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<header>
+  <h1>DOISA<span>.</span></h1>
+  <p>Your private messaging world</p>
+</header>
+
+<main>
+  <div class="chat">
+
+    <!-- Login and Register -->
+    <div id="authPanel">
+      <h2>Welcome to DOISA 👋</h2>
+
+      <input id="displayName" type="text"
+        placeholder="Choose Username">
+
+      <input id="phone" type="tel"
+        placeholder="Phone Number">
+
+      <input id="email" type="email"
+        placeholder="Enter your email">
+
+      <input id="password" type="password"
+        placeholder="Enter password">
+
+      <button id="forgotBtn" type="button">
+        Forgot Password?
+      </button>
+
+      <button id="registerBtn" type="button">
+        Register
+      </button>
+
+      <button id="loginBtn" type="button">
+        Login
+      </button>
+
+      <p id="authMessage"></p>
+    </div>
+
+    <!-- Main App -->
+    <div id="chatPanel" hidden>
+
+      <h2>DOISA Private Chat 🔒</h2>
+
+      <div id="profileSection">
+  <img id="profilePhoto"
+       src="https://placehold.co/100x100"
+       alt="Profile Photo">
+
+  <h3 id="profileName"></h3>
+
+  <input id="photoInput"
+         type="file"
+         accept="image/*">
+
+  <button id="saveProfileBtn" type="button">
+    Save Profile
+  </button>
+
+  <p id="profileMessage"></p>
+</div>
+
+      <button id="logoutBtn" type="button">
+        Logout
+      </button>
+
+      <!-- Find user -->
+      <section id="searchPanel">
+        <h3>Find a person</h3>
+
+        <input id="userSearch"
+          type="text"
+          placeholder="Enter username or phone number">
+
+        <button id="searchBtn" type="button">
+          Search
+        </button>
+
+        <div id="searchResults"></div>
+      </section>
+<!-- Chat Requests -->
+<section id="requestsPanel">
+  <h3>Chat Requests 📩</h3>
+  <div id="requestList"></div>
+</section>
+      <!-- Selected person -->
+      <section id="privateChatPanel" hidden>
+
+  <div id="chatHeader">
+  <img id="chatProfilePhoto"
+       src="https://placehold.co/100x100"
+       alt="Profile">
+
+  <h3 id="chatWithName">Private Chat</h3>
+</div>  
+
+        <button id="backBtn" type="button">
+          Back
+        </button>
+
+        <div id="privateMessages"></div>
+
+        <form id="privateMessageForm">
+          <input id="privateMessageInput"
+            type="text"
+            placeholder="Write a private message..."
+            required>
+
+          <button type="submit">➤</button>
+        </form>
+
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<script type="module" src="Script.js"></script>
+
+</body>
+</html>
